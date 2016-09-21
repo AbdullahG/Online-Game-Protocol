@@ -40,7 +40,7 @@ Online Game Protocol, consisting of Server and Client side implementation
    - Users can be hit while they are on the move.
 
 ####Server-Client-Test
-![alt text](https://github.com/AbdullahG/Online-Game-Protocol/client/src/main/resources/server-client-test.png "Server-Client-Test")
+![alt text](https://github.com/AbdullahG/Online-Game-Protocol/blob/master/client/src/main/resources/server-client-test.png "Server-Client-Test")
 
 	
 
