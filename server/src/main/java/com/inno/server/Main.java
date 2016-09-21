@@ -16,7 +16,7 @@ public class Main {
 				System.out.println("Listening for a client connection");
 				Socket socket = serverSocket.accept();
 				System.out.println("Connected to a Client");
-				new Thread(new MultiThreadedServer(socket)).start();
+				new Thread(new MultiThreadedServerRunnable(socket)).start();
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

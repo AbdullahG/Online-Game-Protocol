@@ -13,7 +13,7 @@ import com.inno.models.User;
 import com.inno.services.HitRepository;
 import com.inno.services.UserRepository;
 
-public class MultiThreadedServer implements Runnable {
+public class MultiThreadedServerRunnable implements Runnable {
 
 	private static ConcurrentHashMap<String, User> onlineUsers;
 	private Socket clientSocket;
@@ -23,7 +23,7 @@ public class MultiThreadedServer implements Runnable {
 		setOnlineUsers(new ConcurrentHashMap<String, User>());
 	}
 
-	public MultiThreadedServer(Socket socket) {
+	public MultiThreadedServerRunnable(Socket socket) {
 		this.setClientSocket(socket);
 		this.setCommand(new Command());
 	}
@@ -98,7 +98,7 @@ public class MultiThreadedServer implements Runnable {
 	}
 
 	public static void setOnlineUsers(ConcurrentHashMap<String, User> onlineUsers) {
-		MultiThreadedServer.onlineUsers = onlineUsers;
+		MultiThreadedServerRunnable.onlineUsers = onlineUsers;
 	}
 
 	public Socket getClientSocket() {
